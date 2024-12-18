@@ -9,9 +9,6 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-    env:
-      TF_WORKSPACE: ${{ github.event.pull_request.head.ref }}
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -30,9 +27,6 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
-
-    - name: Select Workspace
-      run: terraform workspace select ${{ env.TF_WORKSPACE }} || terraform workspace new ${{ env.TF_WORKSPACE }}
 
     - name: Terraform Plan
       run: terraform plan -out=tfplan
