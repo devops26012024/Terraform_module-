@@ -1,7 +1,7 @@
 name: 'Terraform AWS Infrastructure Deletion'
 
 on:
-  workflow_dispatch # Manually trigger the destroy workflow
+  workflow_dispatch # Manually trigger the destroy workflow 
 
 jobs:
   terraform-destroy:
