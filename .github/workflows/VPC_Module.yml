@@ -3,7 +3,7 @@ name: VPC_Module
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   terraform:
