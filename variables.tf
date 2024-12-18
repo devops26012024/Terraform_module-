@@ -16,6 +16,12 @@ variable "private_subnets" {
   default     = ["10.0.3.0/24", "10.0.4.0/24"]
 }
 
+variable "availability_zones" {
+  description = "List of availability zones"
+  type        = list(string)
+  default     = ["ap-south-1a", "ap-south-1b"]
+}
+
 variable "region" {
   description = "The AWS region to deploy the VPC"
   type        = string
